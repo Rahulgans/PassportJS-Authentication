@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>Authentication using Passport</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> <!-- load Materialize css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+     <link href="materialize-social.css" rel="stylesheet" type="text/css">
+    <style>
+        body { padding-top:80px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <h3 class="center-align"><span><i class="fa fa-lock"></i></span> - Authentication</h3>
+                <h5 class="center-align"> Using Passport JS</h5>
+                <div style="display: flex;justify-content: space-evenly;margin-top: 2rem;">
+                    <a class="waves-effect waves-light btn" href="/login">Login</a>
+                    <a href="/auth/google/get" class="waves-effect waves-light btn social google">
+                        <span ><i class="fa fa-google"></i>
+                        </span>Login
+                    </a>
+                    <a class="waves-effect waves-light btn" href="/signup">Signup </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

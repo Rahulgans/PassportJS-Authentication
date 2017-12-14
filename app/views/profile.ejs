@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+
+    <title>Authentication using Passport</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> <!-- load Materialize css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body { padding-top:80px; }
+        .input-field label{
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="center-align">Welcome</h3>
+                <% if(user.local.firstName) { %>
+                <ul class="collection">
+                    <li class="collection-item avatar">
+                        <i class="material-icons md-36 circle red">child_care</i>
+                        <span class="title"><b>Name</b></span>
+                        <p><%= user.firstName %></p>
+                    </li>   
+                    <li class="collection-item avatar">
+                        <i class="material-icons md-36 circle green">email</i>
+                        <span class="title"><b>Email</b></span>
+                        <p><%= user.email %></p>
+                    </li>
+                </ul>
+                <% } %>
+
+                <% if(user.google.name) { %>
+                <ul class="collection">
+                    <li class="collection-item avatar">
+                        <i class="material-icons md-36 circle red">child_care</i>
+                        <span class="title"><b>Name</b></span>
+                        <p><%= user.google.name %></p>
+                    </li>   
+                    <li class="collection-item avatar">
+                        <i class="material-icons md-36 circle green">email</i>
+                        <span class="title"><b>Email</b></span>
+                        <p><%= user.google.email %></p>
+                    </li>
+                </ul>
+                <% } %>
+                
+                <span style="margin: 1rem 0rem;"><a class="btn red" href="/logout">Logout</a></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

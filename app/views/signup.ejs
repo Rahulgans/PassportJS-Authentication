@@ -1,0 +1,49 @@
+
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <title>Authentication using Passport</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> <!-- load Materialize css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <style>
+        body { padding-top:80px; }
+        .input-field label{
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                    <% if (message.length > 0) { %> 
+                    <p style="background-color: #da6b49; font-size: 1.3rem; padding: 0.5rem;"><%= message %></p>
+                    <% } %>
+            </div>
+            <form class="col s12" method="POST" action="/signup">
+                <h3 class="center-align"><span><i class="fa fa-user"></i></span>Sign-Up</h3>
+                <div class="input-field">
+                    <label for="first_name" class="active" ><b>First Name</b></label>
+                    <input placeholder="Enter first name.." id="first_name" type="text" name="firstName">               
+                </div>
+                <div class="input-field">
+                    <label for="last_name" class="active" ><b>Last Name</b></label>
+                    <input placeholder="Enter last name.." id="last_name" type="text" name="lastName">               
+                </div>
+                <div class="input-field">
+                    <label for="email" class="active"><b>Email</b></label>
+                    <input placeholder="Enter email.." id="email" type="email" name="email" class="validate">               
+                </div>
+                <div class="input-field" >
+                    <label for="password" class="active" ><b>Password</b></label>
+                    <input placeholder="Enter password" id="password" type="password" name="password" class="validate">               
+                </div>
+                <button class="btn"> Submit details</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
